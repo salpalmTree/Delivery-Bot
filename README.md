@@ -18,3 +18,16 @@ The ESP32 connects to WiFi and hosts a webserver that displays a user interface 
 ![IMG_1CD0996CE798-1](https://user-images.githubusercontent.com/92708446/184167410-3e9edc6d-cdf9-43ff-a2a3-fd505702fc92.jpeg)
 
 The user is then able to pick how many deliveries the robot will make. If three runs are picked, the user then types in the delivery spots in the text field. For example, 'aaa' will correspond to three deliveries, all at delivery spot A. Once the submit button is pressed, the ESP32 will recieve a message from the webserver that contains how many deliveries the robot must make and to which spots to deliver to. The ESP32 then deciphers the message and sends the delivery spots to the Romi through UART. The Romi receives the delivery spots and begins excecuting them. 
+
+Line following demonstration: 
+
+https://user-images.githubusercontent.com/92708446/184291530-1f2c953b-e038-4680-83fb-bacd951fbf5c.mp4
+
+
+Line following and obstacle detection. 
+
+https://user-images.githubusercontent.com/92708446/184291335-31b64deb-cc2c-4938-a936-a1349586c630.mp4
+
+
+https://user-images.githubusercontent.com/92708446/184291395-4b3fc9a4-d3a8-4ca4-bb8d-75d0d56f04e8.mp4
+
