@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <div class="topnav">
+        <h1>Fulfil Romi's Purpose <i class="fas fa-cogs"></i></h1>
+    </div>
+    <div class="content">
+        <form>
+            <input type="radio" id="1" name="numRoutes" value="1" checked>
+            <label for="1">One Run</label>
+            <input type="radio" id="2" name="numRoutes" value="2">
+            <label for="2">Two Runs</label>
+            <input type="radio" id="3" name="numRoutes" value="3">
+            <label for="3">Three Runs</label><br><br><br>
+            <label for="route">Routes to Take:</label>
+            <input type="text" id="route" name="route">
+        </form>
+        <button onclick="submitForm()">Send Order</button>
+        <p>State: <span id="state">Not Calibrated</span></p>
+        <p><i id="gear" class="fas fa-cog"></i></p>
+    </div>
+</body>
+<script src="myscript.js"></script>
+</html>
