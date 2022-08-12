@@ -1,6 +1,6 @@
 # Delivery-Bot
 
-Delivery Bot at its core is a line following robot. It uses the ATmega32U4 MCU from the Romi 32U4 control board to control the motors for the wheels, an ultrasonic sensor for obstacle detection, and a line sensor for line following. An ESP32 MCU was used to host a webserver where the user can send commands through an internet connected device that will essentially, give path instructions to the robot for pick up and delivery. 
+Delivery Bot at its core is a line following robot. It uses the ATmega32U4 MCU from the Romi 32U4 control board to control the motors for the wheels, an ultrasonic sensor for obstacle detection, a 9g servo for a robot arm, and a line sensor for line following. An ESP32 MCU was used to host a webserver where the user can send commands through an internet connected device that will essentially, give path instructions to the robot for pick up and delivery. 
 
 # The Goal
 
@@ -17,7 +17,7 @@ The ESP32 connects to WiFi and hosts a webserver that displays a user interface 
 
 ![IMG_1CD0996CE798-1](https://user-images.githubusercontent.com/92708446/184167410-3e9edc6d-cdf9-43ff-a2a3-fd505702fc92.jpeg)
 
-The user is then able to pick how many deliveries the robot will make. If three runs are picked, the user then types in the delivery spots in the text field. For example, 'aaa' will correspond to three deliveries, all at delivery spot A. Once the submit button is pressed, the ESP32 will recieve a message from the webserver that contains how many deliveries the robot must make and to which spots to deliver to. The ESP32 then deciphers the message and sends the delivery spots to the Romi through UART. The Romi receives the delivery spots and begins excecuting them. 
+The user is then able to pick how many deliveries the robot will make. If three runs are picked, the user then types in the delivery spots in the text field. For example, 'aaa' will correspond to three deliveries, all at delivery spot A. Once the submit button is pressed, the ESP32 will recieve a message from the webserver that contains how many deliveries the robot must make and to which spots to deliver to. The ESP32 then deciphers the message and transmits the delivery spots to the Romi through UART. The Romi transmits its current state of operation (delivering, picking up, doing line following) back to the ESP32 to be displayed on the webserver. 
 
 Line following demonstration: 
 
